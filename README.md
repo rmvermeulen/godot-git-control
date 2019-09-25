@@ -4,7 +4,6 @@
 
 This is a simple Git Companion plugin for @godotengine
 
-![ScreenShot](https://github.com/funabab/godot-git-control/raw/master/addons/godot-git-control.funabab/screenshot.png)
+Forked to get to work on my machine.
 
-## minnor rewrite
-## added godotengine 3 support and some other features
+![ScreenShot](https://github.com/funabab/godot-git-control/raw/master/addons/godot-git-control.funabab/screenshot.png)
