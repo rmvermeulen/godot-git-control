@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/git_toolbar_icon.png-5b363365a37a52a0dbce2e357353b701.stex"
+path="res://.import/screenshot.png-ca0ed05bcac7cc4ee1d4c2d972ece23f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/godot-git-control.funabab/scenes/res/git_toolbar_icon.png"
-dest_files=[ "res://.import/git_toolbar_icon.png-5b363365a37a52a0dbce2e357353b701.stex" ]
+source_file="res://addons/godot-git-control.funabab/screenshot.png"
+dest_files=[ "res://.import/screenshot.png-ca0ed05bcac7cc4ee1d4c2d972ece23f.stex" ]
 
 [params]
 

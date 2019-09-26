@@ -1,7 +1,6 @@
 extends Reference
 
 const Octicon = preload("res://addons/godot-git-control.funabab/scripts/utils/octicons_codes.gd");
-#const FontAwesome = preload("res://addons/godot-git-control.funabab/scripts/utils/font_awesome_codes.gd");
 
 const LOOKUP = {
 	"refresh_btn": "octicon-sync",
@@ -20,7 +19,6 @@ const LOOKUP = {
 
 const FONTS = {
 		"octicon": preload("res://addons/godot-git-control.funabab/scenes/res/octicon_font.tres"),
-#		"fa": preload("res://addons/godot-git-control.funabab/scenes/res/font_awesome_font.tres")
 };
 
 static func _get_icon(name):
@@ -29,14 +27,13 @@ static func _get_icon(name):
 
 	var types = {
 		"octicon": Octicon,
-#		"fa": FontAwesome
 	}
 
 	var icon_type = name.left(split);
 	var icon_name = name.right(split + 1);
 
 	if types.has(icon_type):
-		var code = types[icon_type].get(icon_name);
+		var code = types[icon_type].use(icon_name);
 		if !code.empty():
 			return {
 				"type": icon_type,

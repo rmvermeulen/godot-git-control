@@ -7,8 +7,8 @@ signal ui_action;
 
 onready var launch_terminal_btn = $main/consoles/command_terminal/container/header/container/options/link_container/launch_terminal_btn;
 
-func setup(git):
-	self.git = git;
+func setup(git_client):
+	self.git = git_client;
 	self.git.connect("action_event", self, "_on_action_event");
 	pass
 
@@ -31,13 +31,13 @@ func _ready():
 				btn.text = icon.code;
 				btn.add_font_override("font", IconsManager._get_font(icon.type));
 		else:
-			var text = git.Lang.tr("node_text_" + btn.name);
+			var text = git.Lang.use("node_text_" + btn.name);
 			if text:
 				btn.text = text;
-		btn.hint_tooltip = git.Lang.tr("node_tooltip_" + btn.name);
+		btn.hint_tooltip = git.Lang.use("node_tooltip_" + btn.name);
 
 	launch_terminal_btn.connect("pressed", self, "_on_launch_terminal_btn_pressed");
-	
+
 func _on_launch_terminal_btn_pressed():
 	git.call_action(git.action.SHOW_TERMINAL);
 	pass
